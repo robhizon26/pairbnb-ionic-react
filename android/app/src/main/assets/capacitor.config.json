@@ -1,0 +1,13 @@
+{
+  "appId": "ionic.react.pairbnb",
+  "appName": "PairBnB",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "build",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

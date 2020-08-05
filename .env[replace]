@@ -1,0 +1,5 @@
+REACT_APP_firebaseAPIKey=your_firebaseAPIKey
+REACT_APP_googleMapsAPIKey='your_googleMapsAPIKey'
+REACT_APP_firebaseURL='your_firebaseURL'
+REACT_APP_fbStoreImageURL='your_fbStoreImageURL'
+ 
