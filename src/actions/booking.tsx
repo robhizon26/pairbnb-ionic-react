@@ -13,9 +13,9 @@ export const addBooking = async (place: Place|any, bookingData: any, userId: str
         bookingData.firstName,
         bookingData.lastName,
         bookingData.guestNumber,
-        bookingData.dateFrom,
-        bookingData.dateTo
-    );;
+        bookingData.startDate,
+        bookingData.endDate
+    );
     await axios.post(`${process.env.REACT_APP_firebaseURL}/bookings.json?auth=${token}`, { ...newBooking, id: null })
         .then(res => {
             if (res) {
