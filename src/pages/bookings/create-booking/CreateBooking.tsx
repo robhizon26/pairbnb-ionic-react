@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel, IonButtons,  IonButton, IonIcon, IonGrid, IonRow, IonCol, IonItem, IonInput, IonSelect, IonSelectOption, IonDatetime } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonLabel, IonButtons, IonButton, IonIcon, IonGrid, IonRow, IonCol, IonItem, IonInput, IonSelect, IonSelectOption, IonDatetime } from '@ionic/react';
 import { RouteComponentProps } from 'react-router';
 import { Place } from '../../../models/place.model';
 import { close } from 'ionicons/icons';
@@ -64,7 +64,7 @@ const CreateBooking: React.FC<CreateBookingProps> = ({ selectedPlace, onDismiss,
           <IonButtons slot="primary">
             <IonButton onClick={onCancel}>  <IonIcon slot="icon-only" icon={close} /></IonButton>
           </IonButtons>
-          <IonTitle>CreateBooking</IonTitle>
+          <IonTitle>{selectedPlace.title}</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent class="ion-text-center">
@@ -122,7 +122,7 @@ const CreateBooking: React.FC<CreateBookingProps> = ({ selectedPlace, onDismiss,
                   <IonDatetime
                     displayFormat="MMM DD YYYY"
                     pickerFormat="YY MMM DD"
-                    min={selectedFromDate}
+                    min={selectedFromDate ? selectedFromDate : selectedPlace.availableFrom.toISOString()}
                     max={selectedPlace.availableTo.toISOString()}
                     name="dateTo"
                     value={selectedToDate} onIonChange={e => setSelectedToDate(e.detail.value!)}
@@ -132,7 +132,7 @@ const CreateBooking: React.FC<CreateBookingProps> = ({ selectedPlace, onDismiss,
             </IonRow>
             <IonRow>
               <IonCol size-sm="6" offset-sm="3">
-                <IonButton color="primary" type="submit"  expand="block" disabled={!isEntryValid()}
+                <IonButton color="primary" type="submit" expand="block" disabled={!isEntryValid()}
                 >Book!</IonButton>
               </IonCol>
             </IonRow>

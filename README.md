@@ -1,4 +1,5 @@
-I converted the online training material [Ionic - Build iOS, Android & Web Apps with Ionic & Angular](https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/) in Udemy by Maximilian Schwarzmüller to Ionic React. 
+  ![](others/images/pairbnb_collage.jpg)
+  I converted the online training material [Ionic - Build iOS, Android & Web Apps with Ionic & Angular](https://www.udemy.com/course/ionic-2-the-practical-guide-to-building-ios-android-apps/) in Udemy by Maximilian Schwarzmüller to Ionic React. 
 
 You can see the source code of the training material [here](https://github.com/robhizon26/pairbnb-ionic-ng).
 
@@ -23,7 +24,7 @@ This is just the ready app that is connecting to my Firebase account and databas
 
 2. You need create a Firebase account because that is where the database is stored, that is where the image is uploaded, and that is where authentication is happening.
 
-3. You need to initialize and to deploy Firebase function because that is where a logic for image upload is being deployed. 
+3. You need to initialize and to deploy Firebase function because that is where a logic for image upload is being deployed. It is made from nodeJs.
 
     Within the function folder you need to create `config.js` with the content of:
     ```javascript

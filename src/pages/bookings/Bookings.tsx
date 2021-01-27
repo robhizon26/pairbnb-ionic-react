@@ -38,7 +38,7 @@ const Bookings: React.FC = (() => {
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>You Bookings</IonTitle>
+          <IonTitle>Your Bookings</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent>
