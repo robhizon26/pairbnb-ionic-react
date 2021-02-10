@@ -62,15 +62,15 @@ Once you've cloned or downloaded this project you may also build it in iOS if yo
 
 You can run on the terminal window *npm run build* and some of the capacitor cli commands such as *ionic capacitor add ios/android*, *ionic capacitor sync ios/android*, *ionic capacitor open ios/android*, and/or *ionic capacitor run ios/android*.
 
-*npm run build* will create the www folder that will contain the transpiled javascripts, css, and index.html files. This is important because this will be the web app that will be wrapped by capacitor to be used as a native app in iOS or Android device.
+*npm run build* will create the build folder that will contain the transpiled javascripts, css, and index.html files. This is important because this will be the web app that will be wrapped by capacitor to be used as a native app in iOS or Android device.
 
+Or you can just do *npm run build-android*. Collectively, I made a combined script on package.json that will do *npm run build* and *ionic capacitor sync android* thereafter. That will do the trick for your Android project. 
+
+### Explanation of Ionic Capacitor CLI commands 
 *ionic capacitor add ios* or *ionic capacitor add android* will build and add the ios or android folder. That is basically the app that you can run on XCode or Android Studio respectively. You only need to run this once. Successive updates on the code doesn't need to re-run this command.
 
-*ionic capacitor sync ios* or *ionic capacitor sync android* will sync any changes you've made on the app  only after you've run again *npm run build* to update the www folder.
+*ionic capacitor sync ios* or *ionic capacitor sync android* will sync any changes you've made on the app only after you've run again *npm run build* to update the build folder.
 
 *ionic capacitor open ios* or *ionic capacitor open android* will just open the app on XCode or Android Studio respectively. You may have to try it multiple times because, sometimes, it doesn't work on the first tries. Alternatively, you can just open Android Studio or XCode and directly open the project created on the android and ios folders respectively.
 
 *ionic capacitor run ios* or *ionic capacitor run android* will just run all of capacitor cli commands mentioned above. So you can just solely use this one on any creation or update of ios and android folders.
-
- 
-
